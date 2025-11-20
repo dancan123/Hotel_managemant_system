@@ -1,0 +1,231 @@
+/* Responsive Design - Mobile and Tablet */
+
+@media (max-width: 1024px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .charts-container {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-menu {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-container {
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .nav-link {
+        display: block;
+        padding: 10px 5px;
+        border-bottom: none;
+        border-left: 3px solid transparent;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+        border-left-color: var(--secondary-color);
+        border-bottom-color: transparent;
+    }
+
+    .user-menu {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .page-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-actions {
+        grid-column: 1;
+        flex-direction: column;
+    }
+
+    .form-actions .btn {
+        width: 100%;
+    }
+
+    .data-table {
+        font-size: 12px;
+    }
+
+    .data-table th,
+    .data-table td {
+        padding: 8px 5px;
+    }
+
+    .rooms-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+
+    .reports-filters {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .login-card {
+        margin: 20px;
+    }
+
+    #logoutBtn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    .login-card {
+        padding: 20px;
+    }
+
+    .login-card h1 {
+        font-size: 22px;
+    }
+
+    .stat-value {
+        font-size: 24px;
+    }
+
+    .nav-brand {
+        font-size: 16px;
+    }
+
+    .page-content {
+        padding: 10px;
+    }
+
+    .form-container {
+        padding: 10px;
+    }
+
+    .rooms-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .room-card {
+        padding: 15px;
+    }
+
+    .room-number {
+        font-size: 20px;
+    }
+
+    .chart-wrapper canvas {
+        max-height: 250px;
+    }
+
+    .data-table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    .data-table thead {
+        display: none;
+    }
+
+    .data-table tbody tr {
+        display: block;
+        border: 1px solid var(--light-gray);
+        border-radius: 5px;
+        margin-bottom: 15px;
+        overflow: hidden;
+    }
+
+    .data-table td {
+        display: block;
+        text-align: right;
+        padding-left: 50%;
+        border-bottom: 1px solid var(--light-gray);
+        position: relative;
+    }
+
+    .data-table td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding: 12px 15px;
+        background-color: var(--light-gray);
+        font-weight: 600;
+        text-align: left;
+    }
+
+    .btn-block {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .demo-credentials {
+        font-size: 11px;
+    }
+
+    .demo-credentials p {
+        margin-bottom: 3px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    body {
+        background: white;
+    }
+
+    .navbar,
+    .page-header,
+    .btn,
+    .form-container,
+    #salesFormContainer,
+    #checkInFormContainer,
+    #addEmployeeFormContainer {
+        display: none;
+    }
+
+    .page-content {
+        box-shadow: none;
+    }
+
+    .data-table {
+        border: 1px solid #000;
+    }
+
+    .data-table th,
+    .data-table td {
+        border: 1px solid #000;
+    }
+
+    canvas {
+        page-break-inside: avoid;
+    }
+}
